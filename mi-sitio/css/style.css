@@ -1,5 +1,4 @@
 * {
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -9,10 +8,57 @@ html{
 }
 
 body, header, main, footer {
-    border: 3px red solid;
+    /* border: 3px red solid; */
     min-height: 50px;
     margin:  0.5rem;
     min-width: 400px; /*no se achica más que esto*/
+}
+
+header{
+    background: #FFF;
+    box-shadow: 0 0 0.5rem rgb( 83 78 76 /50%);
+}
+
+/* logo menú */
+.header-logo{
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+/* menú */
+.header-menu{
+    left:auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem 0 0.5rem 1rem;
+}
+
+.header-menu ul {
+    list-style: none;
+}
+
+.header-menu li{
+    float: left;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0.5rem 0;
+}
+
+.header-menu a{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.header-menu a:hover {
+    color: indianred;
+}
+
+footer{
+    background: #FFF;
 }
 
 main {
