@@ -75,8 +75,6 @@ main {
 }
 
 /* carrousel */
-
-
 .carrousel {
     max-width: 120em;
     transition: all 0.4s ease;
@@ -111,7 +109,7 @@ main {
 
 .carrousel .puntos {
     width: 100%;
-    margin: 0 0 0;
+    margin: 0 0 2em 0;
     padding: 0.4em;
     display: flex;
     flex-flow: row nowrap;
@@ -131,4 +129,37 @@ main {
 
 .carrousel .punto.activo {
     background-color: hotpink; /* fondo cuando está activo */
+}
+
+/* destacados */
+
+.destacado{
+    /* border: 1px red solid; */
+    margin: 2em;
+    padding: 1em;
+    text-align: center;
+}
+
+.destacado img{
+    float: left;
+    height: 200px;
+    width: 300px;
+    margin: 0 0 1em 0;
+}
+
+.destacado div {
+    padding: 1em;
+    box-shadow: 0 0 0.5rem rgb(83 78 76 /50%);
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem 0 0.5rem 1rem;
+    text-align: left;
+}
+
+.titulo-destacado{
+    text-align: center;
+    font-size: x-large;
 }
