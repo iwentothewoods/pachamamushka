@@ -1,34 +1,43 @@
 * {
+    margin: 0;
+    padding: 0;
+    border: 0;
     box-sizing: border-box;
+    vertical-align: baseline;
+    font-family: 'Roboto', sans-serif;
 }
 
-html{
+html {
     font-size: 1rem;
-    height: 100%; /*100% de su contenedor*/
+    height: 100%;
+    /*100% de su contenedor*/
 }
 
-body, header, main, footer {
+body,header,main,footer {
     /* border: 3px red solid; */
     min-height: 50px;
-    margin:  0.5rem;
-    min-width: 400px; /*no se achica más que esto*/
+    margin: 0.5rem;
+    min-width: 400px;
+    /*no se achica más que esto*/
 }
 
-header{
+header {
     background: #FFF;
-    box-shadow: 0 0 0.5rem rgb( 83 78 76 /50%);
+    box-shadow: 0 0 0.5rem rgb(83 78 76 /50%);
+    
 }
 
 /* logo menú */
-.header-logo{
+.header-logo {
     width: auto;
     display: inline-block;
-    margin: 0.5rem;
+    margin: 0.4rem;
 }
 
 /* menú */
-.header-menu{
-    left:auto;
+.header-menu {
+    /* border: 1px red solid; */
+    left: auto;
     position: relative;
     top: auto;
     width: auto;
@@ -40,27 +49,86 @@ header{
     list-style: none;
 }
 
-.header-menu li{
+.header-menu li {
     float: left;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
-    margin: 0 0.5rem 0;
+    margin: 0 1rem 0; /* separación entre palabras del menú */
 }
 
-.header-menu a{
+.header-menu a {
     font-size: 16px;
     text-decoration: none;
     color: black;
 }
 
-.header-menu a:hover {
-    color: indianred;
-}
+/* .header-menu a:hover {
+    color: rgb(141, 32, 83);
+} */
 
-footer{
+footer {
     background: #FFF;
 }
 
 main {
     min-height: 200px;
+}
+
+/* carrousel */
+
+
+.carrousel {
+    max-width: 120em;
+    transition: all 0.4s ease;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.carrousel ul{
+    list-style: none;
+}
+
+.carrousel .grande {
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    padding: 1em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+
+.carrousel .img {
+    width: calc(100% / 3 - 2em);
+    height: 500px;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    box-shadow: 0 0 0.5rem rgb(83 78 76 /50%);
+}
+
+.carrousel .puntos {
+    width: 100%;
+    margin: 0 0 0;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrousel .punto {
+    width: 2em;
+    height: 2em;
+    margin: 1em 1em 0; /* espacio entre puntos */
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: pink; /* fondo cuando está inactivo */
+    box-shadow: 0 0 0.5rem rgb(83 78 76 /50%);
+}
+
+.carrousel .punto.activo {
+    background-color: hotpink; /* fondo cuando está activo */
 }
