@@ -37,10 +37,10 @@ header {
 /* menú */
 .header-menu {
     /* border: 1px red solid; */
-    left: auto;
     position: relative;
+    left: auto;
     top: auto;
-    width: auto;
+    width: 90%;
     display: inline-block;
     margin: 0.5rem 0 0.5rem 1rem;
 }
