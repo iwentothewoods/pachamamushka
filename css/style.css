@@ -4,7 +4,7 @@
     border: 0;
     box-sizing: border-box;
     vertical-align: baseline;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 html {
@@ -13,7 +13,10 @@ html {
     /*100% de su contenedor*/
 }
 
-body,header,main,footer {
+body,
+header,
+main,
+footer {
     /* border: 3px red solid; */
     min-height: 50px;
     margin: 0.5rem;
@@ -24,7 +27,6 @@ body,header,main,footer {
 header {
     background: #FFF;
     box-shadow: 0 0 0.5rem rgb(83 78 76 /50%);
-    
 }
 
 /* logo menú */
@@ -53,7 +55,8 @@ header {
     float: left;
     font-weight: 600;
     text-align: center;
-    margin: 0 1rem 0; /* separación entre palabras del menú */
+    margin: 0 1rem 0;
+    /* separación entre palabras del menú */
 }
 
 .header-menu a {
@@ -82,7 +85,7 @@ main {
     overflow: hidden;
 }
 
-.carrousel ul{
+.carrousel ul {
     list-style: none;
 }
 
@@ -120,27 +123,30 @@ main {
 .carrousel .punto {
     width: 2em;
     height: 2em;
-    margin: 1em 1em 0; /* espacio entre puntos */
+    margin: 1em 1em 0;
+    /* espacio entre puntos */
     transition: all 0.4s ease;
     border-radius: 1em;
-    background-color: pink; /* fondo cuando está inactivo */
+    background-color: pink;
+    /* fondo cuando está inactivo */
     box-shadow: 0 0 0.5rem rgb(83 78 76 /50%);
 }
 
 .carrousel .punto.activo {
-    background-color: hotpink; /* fondo cuando está activo */
+    background-color: hotpink;
+    /* fondo cuando está activo */
 }
 
 /* destacados */
 
-.destacado{
+.destacado {
     /* border: 1px red solid; */
     margin: 2em;
     padding: 1em;
     text-align: center;
 }
 
-.destacado img{
+.destacado img {
     float: left;
     height: 200px;
     width: 300px;
@@ -159,7 +165,66 @@ main {
     text-align: left;
 }
 
-.titulo-destacado{
+.titulo-destacado {
     text-align: center;
     font-size: x-large;
+    
+}
+
+/* FAQ */
+
+.div-faq {
+    padding: 0.5em;
+    /* box-shadow: 0 0 0.5rem rgb(83 78 76 /50%); */
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+    text-align: justify;
+}
+
+.main-center {
+    /* border: 1px red solid; */
+    padding: 1em 2em 0 2em;
+}
+
+/* CATÁLOGO */
+
+.producto {
+    /* border: 1px red solid; */
+    margin: 1rem 1rem 0.5rem 2rem;
+    padding: 1em;
+    text-align: left;
+    box-shadow: 0 0 0.5rem rgb(83 78 76 /25%);
+    left: auto;
+    position: relative;
+    top: auto;
+    width: 95%;
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: left;
+}
+
+.producto img {
+    float: left;
+    height: 200px;
+    width: 300px;
+    margin: 0 0 1em 0;
+}
+
+.producto div {
+    /* border: 1px red solid; */
+    padding: 0 1em 0 1em;
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    max-width: 70%;
+    display: inline-block;
+}
+
+.producto div > p{
+text-align: justify;
 }
