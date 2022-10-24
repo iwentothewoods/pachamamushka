@@ -21,6 +21,7 @@ footer {
     min-height: 50px;
     margin: 0.5rem;
     min-width: 400px;
+    font-family: 'Lato', sans-serif;
     /*no se achica más que esto*/
 }
 
@@ -56,6 +57,7 @@ header {
     font-weight: 600;
     text-align: center;
     margin: 0 1rem 0;
+    font-family: 'Lato', sans-serif;
     /* separación entre palabras del menú */
 }
 
@@ -63,6 +65,7 @@ header {
     font-size: 16px;
     text-decoration: none;
     color: black;
+    font-family: 'Lato', sans-serif;
 }
 
 /* .header-menu a:hover {
@@ -147,13 +150,13 @@ main {
 }
 
 .destacado img {
-    float: left;
     height: 200px;
     width: 300px;
     margin: 0 0 1em 0;
 }
 
 .destacado div {
+    /* border: 1px blue solid; */
     padding: 1em;
     box-shadow: 0 0 0.5rem rgb(83 78 76 /50%);
     left: auto;
@@ -163,6 +166,13 @@ main {
     display: inline-block;
     margin: 0.5rem 0 0.5rem 1rem;
     text-align: left;
+    min-height: 350px;
+    flex-flow: row nowrap;
+}
+
+.destacado div > p {
+    /* border: 1px red solid; */
+    max-width: 300px;
 }
 
 .titulo-destacado {
@@ -227,4 +237,18 @@ main {
 
 .producto div > p{
 text-align: justify;
+}
+
+.div-sobre{
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+.propiedades{
+    margin-top: 1em;
+}
+
+.propiedades-list{
+    margin-bottom: 0.5em;
+    padding-left: 1em;
 }
