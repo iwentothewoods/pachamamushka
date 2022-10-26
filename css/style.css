@@ -87,6 +87,9 @@ main {
 
 .carrousel ul {
     list-style: none;
+    position: absolute;
+    bottom: 2em;
+    left: -0.5em;
 }
 
 .carrousel .grande {
@@ -161,7 +164,7 @@ main {
     top: auto;
     width: auto;
     display: inline-block;
-    margin: 0.5rem 0 0.5rem 1rem;
+    margin: 0.5rem 1.5rem 0.5rem 1rem;
     text-align: left;
     min-height: 350px;
     flex-flow: row nowrap;
@@ -175,7 +178,7 @@ main {
 .titulo-destacado {
     text-align: center;
     font-size: x-large;
-
+    margin-top: 2em;
 }
 
 /* FAQ */
@@ -309,6 +312,37 @@ main {
     margin-top: 15px;
     text-align: center;
     font-size: 13px;
-    color: #aaa;
+    color: rgb(80, 76, 76);
     margin-bottom: 0;
+}
+
+
+/* BLOG */
+
+.nota-principal{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.nota-principal h1{
+    position: absolute;
+    bottom: 10em;
+    left: 3em;
+}
+
+.nota-principal p{
+    position: absolute;
+    bottom: 14em;
+    left: 6em;
+    max-width: 400px;
+    text-align: justify;
+}
+
+.nota-principal img{
+    height: 500px;
+}
+
+.nota-principal-fondo{
+    background-color: rgb(83 78 76 /25%);
 }
