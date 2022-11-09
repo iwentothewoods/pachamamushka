@@ -4,7 +4,7 @@
     border: 0;
     box-sizing: border-box;
     vertical-align: baseline;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -20,7 +20,7 @@ main{
     min-height: 50px;
     margin: 0.5rem;
     min-width: 400px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     /*no se achica más que esto*/
 }
 
@@ -66,11 +66,12 @@ header {
     font-size: 16px;
     text-decoration: none;
     color: black;
+    opacity: 0.8;
 }
 
-/* .header-menu a:hover {
-    color: rgb(141, 32, 83);
-} */
+.header-menu a:hover {
+    opacity: 1;
+}
 
 
 main {
@@ -78,66 +79,51 @@ main {
 }
 
 /* carrousel */
-.carrousel {
-    max-width: 120em;
-    transition: all 0.4s ease;
-    border-radius: 0.5em;
-    overflow: hidden;
-}
 
-.carrousel ul {
-    list-style: none;
-    position: absolute;
-    bottom: 2em;
-    left: -0.5em;
-}
-
-.carrousel .grande {
-    width: 300%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.4s ease;
-    border-radius: 1em;
-    padding: 1em;
-    transition: all 0.5s ease;
-    transform: translateX(0%);
-}
-
-.carrousel .img {
-    width: calc(100% / 3 - 2em);
-    height: 500px;
-    transition: all 0.4s ease;
-    border-radius: 1em;
-    box-shadow: 0 0 0.5rem rgb(83 78 76 /50%);
-}
-
-.carrousel .puntos {
+.carrusel{
     width: 100%;
-    margin: 0 0 2em 0;
-    padding: 0.4em;
+    height: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-wrap: nowrap;
+    position: relative;
     justify-content: center;
-    align-items: center;
 }
 
-.carrousel .punto {
-    width: 2em;
-    height: 2em;
-    margin: 1em 1em 0;
-    /* espacio entre puntos */
-    transition: all 0.4s ease;
-    border-radius: 1em;
-    background-color: pink;
-    /* fondo cuando está inactivo */
-    box-shadow: 0 0 0.5rem rgb(83 78 76 /50%);
+.carrusel img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
-.carrousel .punto.activo {
-    background-color: hotpink;
-    /* fondo cuando está activo */
+.botones{
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: rgba(61, 59, 59, 0.356);
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color: #fff;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.botones:hover{
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+}
+
+.atras {
+    left: 2%;
+    top: calc(50% - 70px);
+}
+
+.adelante {
+    right: 2%;
+    top: calc(50% - 70px);
 }
 
 /* destacados */
@@ -173,9 +159,11 @@ main {
 .destacado div>p {
     /* border: 1px red solid; */
     max-width: 300px;
+    font-family: 'Lato', sans-serif;
 }
 
 .titulo-destacado {
+    
     text-align: center;
     font-size: x-large;
     margin-top: 2em;
@@ -184,20 +172,31 @@ main {
 /* FAQ */
 
 .div-faq {
-    padding: 0.5em;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     /* box-shadow: 0 0 0.5rem rgb(83 78 76 /50%); */
     left: auto;
     position: relative;
     top: auto;
     width: auto;
     display: inline-block;
-    margin: 0.5rem 0.5rem 0.5rem 1rem;
+    /* margin: 0.5rem 0.5rem 0.5rem 1rem; */
+    margin-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     text-align: justify;
 }
 
-.main-center {
-    /* border: 1px red solid; */
-    padding: 1em 2em 0 2em;
+
+.div-sobre h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.div-sobre h3{
+    margin-left: 1rem;
+    text-decoration: underline;
 }
 
 /* CATÁLOGO */
@@ -253,6 +252,25 @@ main {
     padding-left: 1em;
 }
 
+/* ACERCA */
+.acerca{
+    /* border: 1px red solid; */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.acerca p{
+    margin: 1rem;
+    text-align: justify;
+}
+
+.acerca h2{
+    margin-left: 1rem;
+}
+
+.img-acerca{
+    object-fit: cover;
+    width: 100%;
+}
 
 /* FOOTER */
 
@@ -316,33 +334,3 @@ main {
     margin-bottom: 0;
 }
 
-
-/* BLOG */
-
-.nota-principal{
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.nota-principal h1{
-    position: absolute;
-    bottom: 10em;
-    left: 3em;
-}
-
-.nota-principal p{
-    position: absolute;
-    bottom: 14em;
-    left: 6em;
-    max-width: 400px;
-    text-align: justify;
-}
-
-.nota-principal img{
-    height: 500px;
-}
-
-.nota-principal-fondo{
-    background-color: rgb(83 78 76 /25%);
-}
