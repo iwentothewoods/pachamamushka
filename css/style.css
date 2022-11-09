@@ -180,7 +180,7 @@ main {
     top: auto;
     width: auto;
     display: inline-block;
-    /* margin: 0.5rem 0.5rem 0.5rem 1rem; */
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
     margin-left: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
