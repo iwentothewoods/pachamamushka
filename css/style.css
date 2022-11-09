@@ -118,12 +118,12 @@ main {
 
 .atras {
     left: 2%;
-    top: calc(50%);
+    top: 50%;
 }
 
 .adelante {
     right: 2%;
-    top: calc(50%);
+    top: 50%;
 }
 
 /* destacados */
