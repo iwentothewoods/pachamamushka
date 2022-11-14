@@ -5,7 +5,7 @@ function validar() {
     let telefono = document.getElementById("telefono");
     let consulta = document.getElementById("consulta");
     let listaMensajes = document.getElementById("listaMensajes");
-            
+    
     nombre.classList.remove("error");
     correo.classList.remove("error");
     telefono.classList.remove("error");
@@ -15,7 +15,8 @@ function validar() {
     correoError.innerHTML = "";
     telError.innerHTML = "";
     consultaError.innerHTML = "";
-    
+    listaMensajes.innerHTML = "";
+
 
     if (nombre.value.trim() == "") {
         nombreError.innerHTML = "Nombre inválido";
@@ -27,7 +28,7 @@ function validar() {
         correo.classList.add("error");
         sinError = false;
     }
-    if (telefono.value.trim() == ""  || !telefono.value.match(/[0-9]/)) {
+    if (telefono.value.trim() == "" || !telefono.value.match(/[0-9]/)) {
         telError.innerHTML = "Teléfono inválido";
         telefono.classList.add("error");
         sinError = false;
@@ -39,11 +40,25 @@ function validar() {
     }
 
     if (sinError) {
-        let item = document.createElement("li");
-        listaMensajes.appendChild(item);
+        listaMensajes.style.display = "block";
         alert("Su consulta ha sido enviada exitosamente")
-        // item.innerHTML = nombre.value + " dice " + consulta.value;
+        let nombreitem = document.createElement("li");
+        let correoitem = document.createElement("li");
+        let telitem = document.createElement("li");
+        let consultaitem = document.createElement("li");
+
+        listaMensajes.appendChild(nombreitem);
+        listaMensajes.appendChild(correoitem);
+        listaMensajes.appendChild(telitem);
+        listaMensajes.appendChild(consultaitem);
+
+        nombreitem.innerHTML = "Nombre: " + nombre.value;
+        correoitem.innerHTML = "Correo Electrónico: " + correo.value;
+        telitem.innerHTML = "Teléfono: " + telefono.value;
+        consultaitem.innerHTML = "Mensaje: " + consulta.value;
         document.forms[0].reset();
+    } else {
+        listaMensajes.style.display = "none";
     }
 
     return false;
