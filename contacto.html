@@ -30,22 +30,39 @@
     </header>
 
     <main>
-        <form>
-            <label for "nombre">Nombre</label>
-            <input type = "text" id="nombre" name="nombre" placeholder="Ingrese su nombre"/>
-            <br>
-            <label for "correo">Correo electrónico</label>
-            <input type = "email" id="correo" name="correo" placeholder="Ingrese su correo electrónico"/>
-            <br>
-            <label for "telefono">Teléfono</label>
-            <input type = "number" id="telefono" name="telefono" placeholder="Ingrese su teléfono"/>
-            <br>
-            <label for "consulta">Consulta</label>
-            <input type = "text" id="consulta" name="consulta" placeholder="¿En qué podemos ayudarlo?"/>
+        <div class="formulario-contacto">
+            <form onsubmit="return validar()">
 
+                <label for "nombre">Nombre<span class="obligatorio">*</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" />
+                <p class="input_error" id ="nombreError"></p>
 
-        </form>
+                <label for "correo">Correo electrónico<span class="obligatorio">*</span></label>
+                <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" />
+                <p class="input_error" id ="correoError"></p>
+
+                <label for "telefono">Teléfono<span class="obligatorio">*</span></label>
+                <input type="number" id="telefono" name="telefono" placeholder="Ingrese su teléfono" />
+                <p class="input_error" id ="telError"></p>
+
+                <label for "consulta">Consulta<span class="obligatorio">*</span></label>
+                <textarea id="consulta" name="consulta" placeholder="¿En qué podemos ayudarlo?"></textarea>
+                <p class="input_error" id ="consultaError"></p>
+
+                <button type="submit" name="enviar_formulario" id="enviar">
+                    <p>Enviar</p>
+                </button>
+                <p class="aviso">
+                    <span class="obligatorio"> * </span>Los campos son obligatorios.
+                </p>
+
+            </form>
+        </div>
     </main>
+
+    <ol id="listaMensajes"></ol>
+
+    <script defer src="./js/form.js"></script>
 
     <div class="footer-basico">
         <footer>
