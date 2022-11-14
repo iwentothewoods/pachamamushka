@@ -27,7 +27,7 @@ function validar() {
         correo.classList.add("error");
         sinError = false;
     }
-    if (telefono.value.trim() == ""  || !telefono.value.match(/^[0-9]+$/)) {
+    if (telefono.value.trim() == ""  || !telefono.value.match(/[0-9]/)) {
         telError.innerHTML = "Teléfono inválido";
         telefono.classList.add("error");
         sinError = false;
