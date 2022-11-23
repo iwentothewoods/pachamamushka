@@ -17,24 +17,39 @@ function validar() {
     consultaError.innerHTML = "";
     listaMensajes.innerHTML = "";
 
+    let pat_mail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
     if (nombre.value.trim() == "") {
-        nombreError.innerHTML = "Nombre inválido";
+        nombreError.innerHTML = "Nombre inválido: Debe completar este campo.";
         nombre.classList.add("error");
         sinError = false;
     }
     if (correo.value.trim() == "") {
-        correoError.innerHTML = "Correo electrónico inválido";
+        correoError.innerHTML = "Correo inválido: Debe completar este campo.";
+        correo.classList.add("error");
+        sinError = false;
+    } else if(!pat_mail.test(correo.value.trim())){
+        correoError.innerHTML = "Correo inválido.";
         correo.classList.add("error");
         sinError = false;
     }
-    if (telefono.value.trim() == "" || !telefono.value.match(/[0-9]/)) {
-        telError.innerHTML = "Teléfono inválido";
+
+    if (telefono.value.trim() == "") {
+        telError.innerHTML = "Teléfono inválido: Debe completar este campo.";
+        telefono.classList.add("error");
+        sinError = false;
+    } else if(!telefono.value.match(/[0-9]/)){
+        telError.innerHTML = "Teléfono inválido: Solo se aceptan números en este campo.";
+        telefono.classList.add("error");
+        sinError = false;
+    } else if(telefono.value.toString().length > 15){
+        telError.innerHTML = "Teléfono inválido: Número muy largo.";
         telefono.classList.add("error");
         sinError = false;
     }
+
     if (consulta.value.trim() == "") {
-        consultaError.innerHTML = "Consulta inválida";
+        consultaError.innerHTML = "Consulta inválida: Debe completar este campo";
         consulta.classList.add("error");
         sinError = false;
     }

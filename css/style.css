@@ -452,3 +452,55 @@ button p {
     list-style: none;
     color: #ffff;
 }
+
+/*ETC INDEX*/
+
+.boton{
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.boton button {
+    width: 20%;
+    color:#fff;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.conocemas{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.conocemas div {
+    margin: auto;
+    padding: 2rem;
+    background-color: #fbfbfb;
+    width: 75%;
+    height: 50%;
+}
+
+.conocemas div > h2{
+    font-size: 200%;
+}
+
+.conocemas div > p{
+    font-size: 125%;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.conocemas button {
+    background-color: #d4d3d3;
+    width: 20%;
+    color:#0e0e0e;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.separador img{
+    width: 100%;
+    height: 100%;
+}
