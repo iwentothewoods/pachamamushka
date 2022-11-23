@@ -50,7 +50,7 @@ function validar() {
         telError.innerHTML = "Teléfono inválido: Número muy corto.";
         telefono.classList.add("error");
         sinError = false;
-
+    }
     if (consulta.value.trim() == "") {
         consultaError.innerHTML = "Consulta inválida: Debe completar este campo";
         consulta.classList.add("error");
