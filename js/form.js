@@ -70,10 +70,10 @@ function validar() {
         listaMensajes.appendChild(telitem);
         listaMensajes.appendChild(consultaitem);
 
-        nombreitem.innerHTML = "Nombre: " + nombre.value;
-        correoitem.innerHTML = "Correo Electrónico: " + correo.value;
-        telitem.innerHTML = "Teléfono: " + telefono.value;
-        consultaitem.innerHTML = "Mensaje: " + consulta.value;
+        nombreitem.innerHTML = "<b>Nombre:</b> " + nombre.value;
+        correoitem.innerHTML = "<b>Correo Electrónico:</b> " + correo.value;
+        telitem.innerHTML = "<b>Teléfono:</b> " + telefono.value;
+        consultaitem.innerHTML = "<b>Mensaje:</b> " + consulta.value;
         document.forms[0].reset();
     } else {
         listaMensajes.style.display = "none";
